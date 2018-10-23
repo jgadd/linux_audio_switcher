@@ -6,7 +6,7 @@ cd linux_audio_switcher && cp ./* ~/
 xbindkeys
 
 # Basic config: #
-Edit switch_audio_output.php to make your audio outputs.
+Edit switch_audio_output.php to match your audio outputs.
 
 Press ctrl + alt + a to swap between your devices.
 
