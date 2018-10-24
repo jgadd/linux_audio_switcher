@@ -2,10 +2,15 @@
 // Simple audio switcher script created by Jeremiah Gadd
 
 // Add your output devices here (run 'pactl list short sinks' and copy the first column)
-$outputs = array(
-    4,
-    2
+
+$output_names = array(
+    'alsa_output.usb-Corsair_Corsair_VOID_PRO_Wireless_Gaming_Headset-00.analog-stereo',
+    'alsa_output.usb-0d8c_USB_Sound_Device-00.iec958-stereo'
 );
+
+foreach($output_names as $name) {
+    $outputs[] = substr(`pactl list short sinks | grep $name`, 0, 1);
+}
 
 $cur_output = substr($r = `pactl list short sinks | grep RUNNING`, 0, 1);
 
