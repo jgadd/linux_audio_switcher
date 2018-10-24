@@ -1,7 +1,7 @@
 <?php
 // Simple audio switcher script created by Jeremiah Gadd
 
-// Add your output devices here (run 'pactl list short sinks' and copy the first column)
+// Add your output devices here (run 'pactl list short sinks' and copy the second column)
 
 $output_names = array(
     'alsa_output.usb-Corsair_Corsair_VOID_PRO_Wireless_Gaming_Headset-00.analog-stereo',
